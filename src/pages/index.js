@@ -9,7 +9,7 @@ const HeroTextWrapper = styled.section`
 `
 
 const ThreeDText = styled.h2`
-  font: 130px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 8.125rem/2 'Helvetica Neue', Helvetica, Arial, sans-serif; // 130px
   color: #f5a52b;
   font-weight: bold;
   text-shadow: 0 0 0 rgb(217, 136, 15), 0 1px 0 rgb(210, 129, 8),
@@ -26,7 +26,7 @@ const InsetText = styled.h3`
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 56px;
+  font-size: 3.5rem; // 56px
   text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
 `
 

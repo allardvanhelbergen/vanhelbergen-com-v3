@@ -9,8 +9,8 @@ const NavContainer = styled.div`
 
 const NavLeftContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  max-width: 60rem;
+  padding: 1.5rem 1.25rem;
 `
 
 const HomeLink = styled.h1`

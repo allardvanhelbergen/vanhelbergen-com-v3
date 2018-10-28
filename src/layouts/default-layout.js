@@ -8,8 +8,8 @@ import '../components/layout.css'
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 960px;
-  padding: 1.0875rem 1.45rem;
+  max-width: 60rem; // 960px
+  padding: 1.25rem 1.5rem; // 20px 24px
 `
 
 const Layout = ({ children }) => (
