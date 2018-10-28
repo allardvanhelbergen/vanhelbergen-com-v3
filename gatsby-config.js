@@ -6,16 +6,6 @@ module.exports = {
     seo_title: `Allard van Helbergen's Official Homepage | UX Designer | Frontend Aficionado`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,5 +19,16 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    'gatsby-plugin-styled-components',
+    'gatsby-transformer-sharp',
   ],
 }

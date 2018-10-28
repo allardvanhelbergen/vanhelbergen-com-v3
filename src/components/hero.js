@@ -1,14 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Hero = ({ children }) => (
-  <div
-    style={{
-      textAlign: 'center',
-      marginBottom: '2em',
-    }}
-  >
-    {children}
-  </div>
-)
+const Section = styled.section`
+  text-align: center;
+  margin-bottom: 2em;
+`
+
+const Hero = ({ children }) => <Section>{children}</Section>
 
 export default Hero
