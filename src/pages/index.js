@@ -1,14 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import {
+  FaDribbble,
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMediumM,
+  FaYoutube,
+} from 'react-icons/fa'
 
-import Layout from '../layouts/base-layout'
-import Hero from '../components/hero'
+import Layout from '../layouts/frontpage-layout'
+import SocialIcon from '../components/SocialIcon'
+import SocialIconsList from '../components/SocialIconsList'
 
-const HeroTextWrapper = styled.section`
-  padding: 2em;
-`
+const TextWrapper = styled.section``
 
 const ThreeDText = styled.h2`
+  margin-bottom: -2.5rem;
   font: 8.125rem/2 'Helvetica Neue', Helvetica, Arial, sans-serif; // 130px
   color: #f5a52b;
   font-weight: bold;
@@ -32,12 +41,33 @@ const InsetText = styled.h3`
 
 const IndexPage = () => (
   <Layout>
-    <Hero>
-      <HeroTextWrapper>
-        <ThreeDText>Hi, I’m Allard.</ThreeDText>
-        <InsetText>UX Designer | Frontend Aficionado</InsetText>
-      </HeroTextWrapper>
-    </Hero>
+    <TextWrapper>
+      <ThreeDText>Hi, I’m Allard.</ThreeDText>
+      <InsetText>UX Designer | Frontend Aficionado</InsetText>
+    </TextWrapper>
+    <SocialIconsList>
+      <SocialIcon url="http://www.linkedin.com/in/allardvanhelbergen">
+        <FaLinkedinIn />
+      </SocialIcon>
+      <SocialIcon url="https://github.com/allardvanhelbergen">
+        <FaGithub />
+      </SocialIcon>
+      <SocialIcon url="https://medium.com/@vanhelbergen">
+        <FaMediumM />
+      </SocialIcon>
+      <SocialIcon url="https://dribbble.com/allardvanhelbergen">
+        <FaDribbble />
+      </SocialIcon>
+      <SocialIcon url="https://www.instagram.com/allardvanhelbergen/">
+        <FaInstagram />
+      </SocialIcon>
+      <SocialIcon url="https://www.youtube.com/user/djzoos">
+        <FaYoutube />
+      </SocialIcon>
+      <SocialIcon url="https://www.facebook.com/allard.van.helbergen">
+        <FaFacebookF />
+      </SocialIcon>
+    </SocialIconsList>
   </Layout>
 )
 
