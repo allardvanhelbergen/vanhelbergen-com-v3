@@ -20,7 +20,12 @@ The www.vanhelbergen.com website.
 
 ## 💫 Deploy
 
-When committing to master, Netlify deploys automatically.
+- `yarn build`
+
+Run the production build to check there are no errors. 
+Then, when committing to master, (Netlify)[http://netlify.com] deploys automatically.
+
+
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">

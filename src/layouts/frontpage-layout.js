@@ -5,7 +5,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import BaseLayout from './base-layout'
 import tokens from '../theme/tokens'
 
-const fullPageStyles = createGlobalStyle`
+const FullPageStyle = createGlobalStyle`
   html,
   body,
   #___gatsby,
@@ -39,7 +39,7 @@ const FrontPageContainer = styled.div`
 
 const Layout = ({ children }) => (
   <BaseLayout>
-    <fullPageStyles />
+    <FullPageStyle />
     <FrontPageContainer>{children}</FrontPageContainer>
   </BaseLayout>
 )
