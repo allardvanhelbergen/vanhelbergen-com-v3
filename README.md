@@ -22,8 +22,10 @@ The www.vanhelbergen.com website.
 
 - `yarn build`
 
-Run the production build to check there are no errors. 
-Then, when committing to master, (Netlify)[http://netlify.com] deploys automatically.
+Run the production build to check there are no errors. You can check a deploy preview 
+for your branch on (Netlify)[http://netlify.com].
+
+Once the branch gets merged to master, Netlify deploys automatically.
 
 
 
