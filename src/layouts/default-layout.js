@@ -4,12 +4,19 @@ import styled from 'styled-components'
 
 import BaseLayout from './base-layout'
 import HeaderNav from '../components/header-nav'
-import '../components/layout.css'
+import tokens from '../theme/tokens'
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 60rem; // 960px
   padding: 1.25rem 1.5rem; // 20px 24px
+
+  @media (min-width: ${tokens.breakpoint.mediumAndUp}) {
+    max-width: 45rem; // 720px
+  }
+
+  @media (min-width: ${tokens.breakpoint.largeAndUp}) {
+    max-width: 60rem; // 960px
+  }
 `
 
 const Layout = ({ children }) => (
