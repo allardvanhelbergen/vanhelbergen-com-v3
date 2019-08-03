@@ -23,9 +23,9 @@ The www.vanhelbergen.com website.
 - `yarn build`
 
 Run the production build to check there are no errors. You can check a deploy preview 
-for your branch on (Netlify)[http://netlify.com].
+for your branch on [Netlify](https://app.netlify.com/sites/vanhelbergen-com/deploys?filter=deploy+previews).
 
-Once the branch gets merged to master, Netlify deploys automatically.
+Once the branch gets merged to master, Netlify deploys automatically to https://vanhelbergen-com.netlify.com/.
 
 
 
