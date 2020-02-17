@@ -48,12 +48,12 @@ const GlobalStyles = createGlobalStyle`
   body {
     min-height: 100vh;
     scroll-behavior: smooth;
-    background-color: #f1f1f1;
+    background-color: ${tokens.color.background};
     color: ${tokens.color.text.default};
-    font-family: ${tokens.fontFamilyBase};
-    font-size: 1.25rem;
+    font-family: ${tokens.font.base.family};
+    font-size: ${tokens.font.base.size};
     font-weight: 400;
-    line-height: 1.4;
+    line-height: ${tokens.font.base.lineHeight};
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
   }
@@ -68,18 +68,18 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: #007bff;
+    color: ${tokens.color.text.link};
     background-color: transparent;
   }
 
   a:hover {
-    color: #0056b3;
+    color: ${tokens.color.text.linkHover};
     text-decoration: none;
   }
 
   /* Natural flow and rhythm in articles by default */
   article > * + * {
-    margin-top: 1em;
+    margin-top: 1rem;
   }
 
   address {
@@ -92,8 +92,8 @@ const GlobalStyles = createGlobalStyle`
   code,
   kbd,
   samp {
-    font-family: ${tokens.fontFamilyCode};
-    font-size: 1em;
+    font-family: ${tokens.font.code.family};
+    font-size: ${tokens.font.code.size};
   }
 
   pre {
