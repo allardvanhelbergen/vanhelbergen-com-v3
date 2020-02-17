@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 import tokens from './tokens'
+import bodyBackgroundImage from '../images/whitenoise-361x370.png'
 
 /**
  * Adapted from Bootstrap's reboot.css
@@ -48,6 +49,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     min-height: 100vh;
     scroll-behavior: smooth;
+    background: url(${bodyBackgroundImage});
     background-color: ${tokens.color.background};
     color: ${tokens.color.text.default};
     font-family: ${tokens.font.base.family};
