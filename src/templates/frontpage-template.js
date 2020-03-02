@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import BaseLayout from './base-layout'
+import BaseLayout from './base-template'
 import tokens from '../theme/tokens'
 
 const FullPageStyle = createGlobalStyle`

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import Layout from '../layouts/default-layout'
+import Layout from './default-page-template'
 
 const NextPrevNav = styled.nav`
   margin: 4em 0;
@@ -22,7 +22,6 @@ export default ({ data, pageContext }) => {
       <h1>{post.frontmatter.title}</h1>
       <p>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
       <NextPrevNav>
         <p>
           {pageContext.prev && (

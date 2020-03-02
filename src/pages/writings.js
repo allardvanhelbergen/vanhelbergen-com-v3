@@ -2,7 +2,7 @@ import React from 'react'
 // import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../layouts/default-layout'
+import Layout from '../templates/default-page-template.js'
 
 export default ({ data }) => {
   return (
@@ -41,7 +41,10 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { pageType: { eq: "blog" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
       edges {
         node {
           id

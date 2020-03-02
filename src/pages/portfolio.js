@@ -1,13 +1,62 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+// import styled from 'styled-components'
+import { graphql, Link } from 'gatsby'
 
-import Layout from '../layouts/default-layout'
+import Layout from '../templates/default-page-template.js'
 
-const SecondPage = () => (
-  <Layout>
-    <h1>Allard's portfolio</h1>
-    <p>Welcome to my portfolio.</p>
-  </Layout>
-)
+export default ({ data }) => {
+  return (
+    <Layout>
+      <hgroup>
+        <h1>Portfolio</h1>
+        <h2>2019</h2>
+      </hgroup>
+      <table>
+        <tbody>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <tr key={node.id}>
+              <td>{node.frontmatter.date}</td>
+              <td>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-export default SecondPage
+      {/* <h2>Papers and publications </h2>
+      <table>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <tr key={node.id}>
+            <td>{node.frontmatter.date}</td>
+            <td>
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+            </td>
+          </tr>
+        ))}
+      </table> */}
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { frontmatter: { pageType: { eq: "portfolio" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`

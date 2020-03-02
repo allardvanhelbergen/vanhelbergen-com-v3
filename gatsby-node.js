@@ -32,6 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             frontmatter {
               title
+              pageType
             }
           }
         }
@@ -39,21 +40,37 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  const pageTypeToTemplateMap = [
+    { pageType: 'blog', template: './src/templates/blogpost-template.js' },
+    {
+      pageType: 'portfolio',
+      template: './src/templates/portfolio-item-template.js',
+    },
+  ]
+
   const { createPage } = actions
-  const posts = result.data.allMarkdownRemark.edges
+  const edges = result.data.allMarkdownRemark.edges
 
-  posts.forEach(({ node }, index) => {
-    const prev = index === 0 ? null : posts[index - 1].node
-    const next = index === posts.length - 1 ? null : posts[index + 1].node
+  pageTypeToTemplateMap.forEach(({ pageType, template }) => {
+    let filteredEdges = edges.filter(
+      edge => edge.node.frontmatter.pageType === pageType
+    )
+    filteredEdges.forEach(({ node }, index) => {
+      const prev = index === 0 ? null : filteredEdges[index - 1].node
+      const next =
+        index === filteredEdges.length - 1
+          ? null
+          : filteredEdges[index + 1].node
 
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/layouts/blog-layout.js`),
-      context: {
-        slug: node.fields.slug,
-        prev,
-        next,
-      },
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve(template),
+        context: {
+          slug: node.fields.slug,
+          prev,
+          next,
+        },
+      })
     })
   })
 }
