@@ -10,6 +10,7 @@ const NavContainer = styled.nav`
   padding: 2rem;
   background: orange;
   z-index: 100;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
 
   a {
     color: white;
@@ -35,16 +36,10 @@ const NavRightContainer = styled.ul`
   }
 `
 
-const HomeLink = styled.h1`
-  /* margin: 0; */
-`
-
 const HeaderNavBar = () => (
   <NavContainer>
     <NavLeftContainer>
-      {/* <HomeLink> */}
       <Link to="/">vanhelbergen.com</Link>
-      {/* </HomeLink> */}
     </NavLeftContainer>
     <NavRightContainer>
       <li>
@@ -55,9 +50,6 @@ const HeaderNavBar = () => (
       </li>
       <li>
         <Link to="/writings">Writings</Link>
-      </li>
-      <li>
-        <Link to="/papers">Papers</Link>
       </li>
       <li>
         <Link to="/speaking">Speaking</Link>

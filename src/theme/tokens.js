@@ -8,8 +8,9 @@ const tokens = {
   },
   color: {
     background: '#eee',
+    primary: '#f5a52b',
     text: {
-      default: '#212529',
+      default: '#211b00',
       link: '#007bff',
       linkHover: '#0056b3',
     },
