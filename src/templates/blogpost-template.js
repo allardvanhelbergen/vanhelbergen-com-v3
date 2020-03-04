@@ -1,19 +1,8 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import styled from 'styled-components'
-import Layout from './default-page-template'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
-const NextPrevNav = styled.nav`
-  margin: 4em 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-
-  .right {
-    text-align: right;
-  }
-`
+import Layout from './default-page-template'
+import BlogPrevNextNav from '../components/BlogPrevNextNav'
 
 export default ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -28,28 +17,7 @@ export default ({ data, pageContext }) => {
       <p>Posted on {post.frontmatter.date}</p>
 
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <NextPrevNav>
-        <p>
-          {pageContext.prev && (
-            <>
-              Previous: <br />
-              <Link to={pageContext.prev.fields.slug}>
-                {pageContext.prev.frontmatter.title}
-              </Link>
-            </>
-          )}
-        </p>
-        <p className="right">
-          {pageContext.next && (
-            <>
-              Next: <br />
-              <Link to={pageContext.next.fields.slug}>
-                {pageContext.next.frontmatter.title}
-              </Link>
-            </>
-          )}
-        </p>
-      </NextPrevNav>
+      <BlogPrevNextNav pageContext={pageContext} />
     </Layout>
   )
 }
