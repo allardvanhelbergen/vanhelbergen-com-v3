@@ -11,7 +11,8 @@ const tokens = {
     primary: '#f5a52b',
     text: {
       default: '#211b00',
-      link: '#007bff',
+      // link: '#007bff',
+      link: '#f5a52b',
       linkHover: '#0056b3',
     },
   },
@@ -21,7 +22,7 @@ const tokens = {
         "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
       size: '1.25rem',
-      lineHeight: '1.4',
+      lineHeight: '2',
     },
     code: {
       family: `'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',

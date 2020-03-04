@@ -1,12 +1,15 @@
 ---
 title: 'Links to Awesome HTML5 Stuff'
 date: '2012-02-09'
+description: 'Overview of HTML5 resources and links to them.'
+keywords: 'html, html5, google i/o, chrome experiments, '
 pageType: 'blog'
+published: true
 ---
 
 Although this may be old news to most of you, I find that a lot of people still haven’t seen most of these. If your new to HTML5 or not convinced of its power or for whatever reason don’t think it’s ‘AWESOME!!!’ (note the three exclamation marks, it’s that awesome), then check out these resources below to be convinced.
 
-![The HTML5 logo](/New-HTML5_Logo-300x150.png)
+![The HTML5 logo](./New-HTML5_Logo-300x150.png)
 
 ## Overview with Google IO
 

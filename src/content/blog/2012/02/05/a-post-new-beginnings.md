@@ -1,7 +1,10 @@
 ---
 title: 'A Post: To New Beginnings!'
 date: '2012-02-05'
+description: 'Opening post for my new site'
+keywords: 'new site, blog, beginning'
 pageType: 'blog'
+published: true
 ---
 
 ## The Incentive

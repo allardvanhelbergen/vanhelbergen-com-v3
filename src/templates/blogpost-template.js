@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import Layout from './default-page-template'
+import Img from 'gatsby-image'
 
 const NextPrevNav = styled.nav`
   margin: 4em 0;
@@ -19,8 +20,13 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
+      {post.frontmatter.featuredImage &&
+        post.frontmatter.featuredImage.childImageSharp.fluid && (
+          <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+        )}
       <h1>{post.frontmatter.title}</h1>
       <p>Posted on {post.frontmatter.date}</p>
+
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <NextPrevNav>
         <p>
@@ -55,6 +61,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")
+        featuredImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
