@@ -9,9 +9,9 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "build": "yarn clean && gatsby build",
+    "build": "yarn clean && gatsby build && gatsby serve",
     "clean": "gatsby clean",
-    "develop": "yarn clean && gatsby develop",
+    "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
