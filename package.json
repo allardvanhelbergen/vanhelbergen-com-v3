@@ -9,26 +9,32 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "build": "gatsby build",
+    "build": "yarn clean && gatsby build && gatsby serve",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.5.7",
+    "@mdx-js/react": "^1.5.7",
     "gatsby": "^2.19.17",
-    "gatsby-image": "^2.2.41",
+    "gatsby-image": "^2.2.42",
     "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-mdx": "^1.0.75",
     "gatsby-plugin-offline": "^3.0.34",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.1.19",
+    "gatsby-remark-images": "^3.1.44",
     "gatsby-source-filesystem": "^2.1.48",
-    "gatsby-transformer-sharp": "^2.3.14",
+    "gatsby-transformer-remark": "^2.6.53",
+    "gatsby-transformer-sharp": "^2.3.16",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.9.0",
-    "styled-components": "^5.0.1"
+    "react-icons": "^3.7.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

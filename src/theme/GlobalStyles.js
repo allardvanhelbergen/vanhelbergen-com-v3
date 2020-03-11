@@ -1,70 +1,87 @@
 import { createGlobalStyle } from 'styled-components'
 
 import tokens from './tokens'
+import bodyBackgroundImage from '../images/whitenoise-361x370.png'
 
 /**
  * Adapted from Bootstrap's reboot.css
  * https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap-reboot.css
  */
 const GlobalStyles = createGlobalStyle`
+  /* Box sizing rules */
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
+  
+  /* Remove default padding */
+  ul[class],
+  ol[class] {
+    padding: 0;
+  }
+  
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul[class],
+  ol[class],
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
 
   html {
-    font-family: sans-serif;
-    line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-size: 100%
   }
 
-  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-    display: block;
-  }
-
+  /* Set core body defaults */
   body {
-    margin: 0;
-    font-family: ${tokens.fontFamilyBase};
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    background: url(${bodyBackgroundImage});
+    background-color: ${tokens.color.background};
     color: ${tokens.color.text.default};
-    text-align: left;
-    background-color: #f1f1f1;
+    font-family: ${tokens.font.base.family};
+    font-size: ${tokens.font.base.size};
+    font-weight: 400;
+    line-height: ${tokens.font.base.lineHeight};
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
   }
 
   [tabindex="-1"]:focus {
     outline: 0 !important;
   }
 
-  hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+  a {
+    color: ${tokens.color.text.link};
+    background-color: transparent;
   }
 
-  p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+  a:hover {
+    color: ${tokens.color.text.linkHover};
+    text-decoration: none;
   }
 
-  abbr[title],
-  abbr[data-original-title] {
-    text-decoration: underline;
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
-    cursor: help;
-    border-bottom: 0;
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
+  /* Natural flow and rhythm in articles by default */
+  article > * + * {
+    margin-top: 1rem;
   }
 
   address {
@@ -73,139 +90,22 @@ const GlobalStyles = createGlobalStyle`
     line-height: inherit;
   }
 
-  ol,
-  ul,
-  dl {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
-  ol ol,
-  ul ul,
-  ol ul,
-  ul ol {
-    margin-bottom: 0;
-  }
-
-  dt {
-    font-weight: 700;
-  }
-
-  dd {
-    margin-bottom: .5rem;
-    margin-left: 0;
-  }
-
-  blockquote {
-    margin: 0 0 1rem;
-  }
-
-  b,
-  strong {
-    font-weight: bolder;
-  }
-
-  small {
-    font-size: 80%;
-  }
-
-  sub,
-  sup {
-    position: relative;
-    font-size: 75%;
-    line-height: 0;
-    vertical-align: baseline;
-  }
-
-  sub {
-    bottom: -.25em;
-  }
-
-  sup {
-    top: -.5em;
-  }
-
-  a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-  }
-
-  a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-  }
-
-  a:not([href]):not([tabindex]) {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  a:not([href]):not([tabindex]):focus {
-    outline: 0;
-  }
-
   pre,
   code,
   kbd,
   samp {
-    font-family: ${tokens.fontFamilyCode};
-    font-size: 1em;
+    font-family: ${tokens.font.code.family};
+    font-size: ${tokens.font.code.size};
   }
 
   pre {
-    margin-top: 0;
-    margin-bottom: 1rem;
     overflow: auto;
   }
 
-  figure {
-    margin: 0 0 1rem;
-  }
-
+  /* Make images easier to work with */
   img {
-    vertical-align: middle;
-    border-style: none;
-  }
-
-  svg {
-    overflow: hidden;
-    vertical-align: middle;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  caption {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    color: #6c757d;
-    text-align: left;
-    caption-side: bottom;
-  }
-
-  th {
-    text-align: inherit;
-  }
-
-  label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-  }
-
-  button {
-      border-radius: 0;
-  }
-
-  button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+    max-width: 100%;
+    display: block;
   }
 
   input,
@@ -213,59 +113,9 @@ const GlobalStyles = createGlobalStyle`
   select,
   optgroup,
   textarea {
-    margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-  }
-
-  button,
-  input {
-    overflow: visible;
-  }
-
-  button,
-  select {
-    text-transform: none;
-  }
-
-  select {
-    word-wrap: normal;
-  }
-
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
-
-  button:not(:disabled),
-  [type="button"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  [type="submit"]:not(:disabled) {
-    cursor: pointer;
-  }
-
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
-  }
-
-  input[type="radio"],
-  input[type="checkbox"] {
-  box-sizing: border-box;
-    padding: 0;
-  }
-
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="month"] {
-    -webkit-appearance: listbox;
   }
 
   textarea {
@@ -273,63 +123,25 @@ const GlobalStyles = createGlobalStyle`
     resize: vertical;
   }
 
-  fieldset {
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
+  /* Remove list styles on ul, ol elements with a class attribute */
+  ul[class],
+  ol[class] {
+    list-style: none;
   }
 
-  legend {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin-bottom: .5rem;
-    font-size: 1.5rem;
-    line-height: inherit;
-    color: inherit;
-    white-space: normal;
-  }
-
-  progress {
-    vertical-align: baseline;
-  }
-
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
-
-  [type="search"] {
-    outline-offset: -2px;
-    -webkit-appearance: none;
-  }
-
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-
-  ::-webkit-file-upload-button {
-    font: inherit;
-    -webkit-appearance: button;
-  }
-
-  output {
-    display: inline-block;
-  }
-
-  summary {
-    display: list-item;
-    cursor: pointer;
-  }
-
-  template {
-    display: none;
-  }
-
+  /* Utility styles */
   [hidden] {
     display: none !important;
+  }
+
+  /* Remove all animations and transitions for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 `
 

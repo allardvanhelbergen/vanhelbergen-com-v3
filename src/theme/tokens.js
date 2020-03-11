@@ -7,15 +7,29 @@ const tokens = {
     extraLargeAndUp: '1201px',
   },
   color: {
+    background: '#eee',
+    primary: '#f5a52b',
     text: {
-      default: '#212529',
+      default: '#211b00',
+      // link: '#007bff',
+      link: '#f5a52b',
+      linkHover: '#0056b3',
     },
   },
-  fontFamilyBase: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
-    "Segoe UI Symbol", "Noto Color Emoji"`,
-  fontFamilyCode: `'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
-    'Liberation Mono', Menlo, Courier, monospace`,
+  font: {
+    base: {
+      family: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+      size: '1.25rem',
+      lineHeight: '2',
+    },
+    code: {
+      family: `'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+        'Liberation Mono', Menlo, Courier, monospace`,
+      size: '1em',
+    },
+  },
 }
 
 export default tokens

@@ -10,7 +10,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa'
 
-import Layout from '../layouts/frontpage-layout'
+import Layout from '../templates/frontpage-template'
 import SocialIcon from '../components/SocialIcon'
 import IconsList from '../components/SocialIconsList'
 import tokens from '../theme/tokens'
@@ -111,6 +111,43 @@ const IndexPage = () => (
         <FaFacebookF />
       </SocialIcon>
     </IconsList>
+    {/* <div>
+      <p>
+        I’m a User Experience Designer based in Sydney, Australia. I have a
+        passion for design systems, design process and tooling.
+      </p>
+    </div> */}
+    {/* <p>
+      I am a UX Designer currently based in Berlin. I’m a Vrije Universiteit,
+      Amsterdam alumnus with an M.Sc. in Human Computer Interaction (Information
+      Science: Multimedia and Culture). With an international background and
+      great interest in workflows and the structuring of information, I am keen
+      on designing interaction in that works for the target persona.
+    </p>
+
+    <p>
+      Currently I work at Brandwatch in Berlin, where I work on the Analytics
+      web app and take care of the various facets of (user)research and
+      strategies around upgrading the frontend design and development process.
+      Previously, I worked for deltamethod and on the Search Quality Evaluation
+      team for Google in Dublin, where I did UX and front end development on the
+      tools team.
+    </p>
+
+    <p>
+      Being a bit of a process geek I like to focus on strategic UX work;
+      guiding the design thinking processes and fitting that into Agile
+      environments. I have a strong background in web development and frontend
+      design, having done full-stack development and progressing to more pure
+      frontend things for various clients and employers. In the past I have also
+      done a lot of desktop publishing things, creating textiles prints,
+      posters, flyers and even books.
+    </p>
+
+    <p>
+      Other than that I’m an avid (wind-/kite-/everything-)surfer, skateboarder
+      and snowboarder getting an adrenaline fix whenever I get the chance.
+    </p> */}
   </Layout>
 )
 
