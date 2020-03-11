@@ -13,7 +13,7 @@ export default ({ data }) => {
       </hgroup>
       <table>
         <tbody>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMdx.edges.map(({ node }) => (
             <tr key={node.id}>
               <td>{node.frontmatter.date}</td>
               <td>
@@ -23,25 +23,13 @@ export default ({ data }) => {
           ))}
         </tbody>
       </table>
-
-      {/* <h2>Papers and publications </h2>
-      <table>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <tr key={node.id}>
-            <td>{node.frontmatter.date}</td>
-            <td>
-              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-            </td>
-          </tr>
-        ))}
-      </table> */}
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { pageType: { eq: "portfolio" } } }
       sort: { order: DESC, fields: frontmatter___date }
     ) {
