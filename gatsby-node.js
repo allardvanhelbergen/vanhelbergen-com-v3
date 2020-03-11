@@ -6,11 +6,49 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const pageTypeToTemplateMap = [
+  { pageType: 'blog', template: './src/templates/blogpost-template.js' },
+  {
+    pageType: 'portfolio',
+    template: './src/templates/portfolio-item-template.js',
+  },
+]
+
+const PAGE_QUERY = `
+  {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            pageType
+          }
+        }
+      }
+    }
+    allMdx(sort: { order: ASC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            pageType
+          }
+        }
+      }
+    }
+  }
+`
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
-    // const slug = createFilePath({ node, getNode, basePath: `blog` })
+  if ([`MarkdownRemark`, `Mdx`].includes(node.internal.type)) {
     const slug = createFilePath({ node, getNode })
 
     createNodeField({
@@ -22,34 +60,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  const result = await graphql(`
-    {
-      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              pageType
-            }
-          }
-        }
-      }
-    }
-  `)
+  const result = await graphql(PAGE_QUERY)
 
-  const pageTypeToTemplateMap = [
-    { pageType: 'blog', template: './src/templates/blogpost-template.js' },
-    {
-      pageType: 'portfolio',
-      template: './src/templates/portfolio-item-template.js',
-    },
-  ]
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
 
   const { createPage } = actions
-  const edges = result.data.allMarkdownRemark.edges
+  const edges = [
+    ...result.data.allMarkdownRemark.edges,
+    ...result.data.allMdx.edges,
+  ]
 
   pageTypeToTemplateMap.forEach(({ pageType, template }) => {
     let filteredEdges = edges.filter(
