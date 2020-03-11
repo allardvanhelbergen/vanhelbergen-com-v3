@@ -31,8 +31,14 @@ export const query = graphql`
         date(formatString: "DD MMMM, YYYY")
         featuredImage {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(
+              traceSVG: {
+                color: "#f90"
+                turnPolicy: TURNPOLICY_MINORITY
+                blackOnWhite: false
+              }
+            ) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
