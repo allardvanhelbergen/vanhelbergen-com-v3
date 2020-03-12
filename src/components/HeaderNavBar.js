@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import monogram from '../images/avh-monogram-transparent.svg'
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -16,6 +17,10 @@ const NavContainer = styled.nav`
     color: white;
     text-decoration: none;
   }
+`
+
+const Logo = styled.img`
+  width: 2em;
 `
 
 const NavLeftContainer = styled.div`
@@ -39,7 +44,9 @@ const NavRightContainer = styled.ul`
 const HeaderNavBar = () => (
   <NavContainer>
     <NavLeftContainer>
-      <Link to="/">vanhelbergen.com</Link>
+      <Link to="/">
+        <Logo src={monogram} />
+      </Link>
     </NavLeftContainer>
     <NavRightContainer>
       <li>
