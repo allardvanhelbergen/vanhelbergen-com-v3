@@ -21,6 +21,7 @@ The www.vanhelbergen.com website.
 ### Tips
 
 - To get a sitemap, enter the URL of any nonexisting page. http://localhost:8000/asdf
+- Design files are on Figma. https://www.figma.com/files/project/3988002/vanhelbergen.com
 
 ## 💫 Deploy
 
