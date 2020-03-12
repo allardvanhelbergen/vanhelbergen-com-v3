@@ -1,12 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 import tokens from './tokens'
-import bodyBackgroundImage from '../images/whitenoise-361x370.png'
+import bodyBackgroundImage from '../images/noise-100x100-90noise-4opacity.png'
 
-/**
- * Adapted from Bootstrap's reboot.css
- * https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap-reboot.css
- */
 const GlobalStyles = createGlobalStyle`
   /* Box sizing rules */
   *,
