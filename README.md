@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.vanhelbergen.com">
-    <img alt="Gatsby" src="https://www.vanhelbergen.com/monogram.svg" width="60" />
+    <img alt="AvH monogram" src="./static/avh-monogram.svg" width="128" />
   </a>
 </p>
 <h1 align="center">
@@ -21,6 +21,7 @@ The www.vanhelbergen.com website.
 ### Tips
 
 - To get a sitemap, enter the URL of any nonexisting page. http://localhost:8000/asdf
+- Design files are on Figma. https://www.figma.com/files/project/3988002/vanhelbergen.com
 
 ## 💫 Deploy
 
