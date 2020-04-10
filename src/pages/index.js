@@ -11,8 +11,7 @@ import {
 } from 'react-icons/fa'
 
 import Layout from '../templates/frontpage-template'
-import SocialIcon from '../components/SocialIcon'
-import IconsList from '../components/SocialIconsList'
+import SocialIcon, { SocialIconList } from '../components/SocialIcon'
 import tokens from '../theme/tokens'
 
 const WelcomeText = styled.div`
@@ -88,7 +87,7 @@ const IndexPage = () => (
       <WelcomeMain>Hi, I’m Allard.</WelcomeMain>
       <WelcomeTagLine>UX&nbsp;Designer Frontend&nbsp;Aficionado</WelcomeTagLine>
     </WelcomeText>
-    <IconsList>
+    <SocialIconList>
       <SocialIcon url="http://www.linkedin.com/in/allardvanhelbergen">
         <FaLinkedinIn />
       </SocialIcon>
@@ -110,7 +109,7 @@ const IndexPage = () => (
       <SocialIcon url="https://www.facebook.com/allard.van.helbergen">
         <FaFacebookF />
       </SocialIcon>
-    </IconsList>
+    </SocialIconList>
     {/* <div>
       <p>
         I’m a User Experience Designer based in Sydney, Australia. I have a
