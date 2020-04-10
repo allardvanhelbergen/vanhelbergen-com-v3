@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import monogram from '../images/avh-monogram-transparent.svg'
+import monogram from '../../images/avh-monogram-transparent.svg'
 
 const NavContainer = styled.nav`
   position: fixed;
