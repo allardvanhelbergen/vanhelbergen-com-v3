@@ -7,11 +7,11 @@ const tokens = {
     extraLargeAndUp: '1201px',
   },
   color: {
+    white: '#fff',
     background: '#eee',
     primary: '#f5a52b',
     text: {
       default: '#211b00',
-      // link: '#007bff',
       link: '#f5a52b',
       linkHover: '#0056b3',
     },
@@ -23,6 +23,9 @@ const tokens = {
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
       size: '1.25rem',
       lineHeight: '2',
+    },
+    headings: {
+      family: `serif`,
     },
     code: {
       family: `'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
