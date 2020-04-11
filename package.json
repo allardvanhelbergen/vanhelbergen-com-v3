@@ -26,6 +26,7 @@
     "gatsby-plugin-mdx": "^1.0.75",
     "gatsby-plugin-offline": "^3.0.34",
     "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.1.19",
     "gatsby-remark-images": "^3.1.44",
@@ -47,6 +48,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "babel-loader": "^8.1.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "svg-react-loader": "^0.4.6"
   }
 }
