@@ -8,7 +8,7 @@ export default {
 
 export const All = () => (
   <div>
-    <h1>🎨 All the graphical elements 🎨</h1>
+    <h1>🎨 All the HTML elements 🎨</h1>
     <h2>Headings</h2>
     <Headings />
     <h2>Typographic elements</h2>
@@ -81,19 +81,19 @@ export const Typographic = () => (
     </p>
     <p>
       Text with a footnote
-      <sup class="footnote-ref">
+      <sup className="footnote-ref">
         <a href="#fn1" id="fnref1">
           [1]
         </a>
       </sup>
       . A second
-      <sup class="footnote-ref">
+      <sup className="footnote-ref">
         <a href="#fn2" id="fnref2">
           [2]
         </a>
       </sup>{' '}
       footnote and a reference to the same
-      <sup class="footnote-ref">
+      <sup className="footnote-ref">
         <a href="#fn2" id="fnref2:1">
           [2:1]
         </a>
@@ -104,27 +104,27 @@ export const Typographic = () => (
       This is <abbr title="Hyper Text Markup Language">HTML</abbr> abbreviation
       example.
     </p>
-    <hr class="footnotes-sep" />
-    <section class="footnotes">
-      <ol class="footnotes-list">
-        <li id="fn1" class="footnote-item">
+    <hr className="footnotes-sep" />
+    <section className="footnotes">
+      <ol className="footnotes-list">
+        <li id="fn1" className="footnote-item">
           <p>
             Footnote <strong>can have markup</strong>
           </p>
           <p>
             and multiple paragraphs.{' '}
-            <a href="#fnref1" class="footnote-backref">
+            <a href="#fnref1" className="footnote-backref">
               ↩︎
             </a>
           </p>
         </li>
-        <li id="fn2" class="footnote-item">
+        <li id="fn2" className="footnote-item">
           <p>
             Footnote text.{' '}
-            <a href="#fnref2" class="footnote-backref">
+            <a href="#fnref2" className="footnote-backref">
               ↩︎
             </a>{' '}
-            <a href="#fnref2:1" class="footnote-backref">
+            <a href="#fnref2:1" className="footnote-backref">
               ↩︎
             </a>
           </p>
