@@ -14,9 +14,13 @@ The www.vanhelbergen.com website.
 - `yarn`
 - `yarn develop`
 
-  Your site is now running with hot reloading at `http://localhost:8000`!
+  - Your site is now running with hot reloading at `http://localhost:8000`!
 
-  Query data through `http://localhost:8000/___graphql`.
+  - Query data through `http://localhost:8000/___graphql`.
+
+- `yarn storybook`
+
+  - Storybook is running to view individual components at `http://localhost:6006`
 
 ### Tips
 
@@ -27,10 +31,10 @@ The www.vanhelbergen.com website.
 
 - `yarn build`
 
-Run the production build to check there are no errors. You can check a deploy preview
-for your branch on [Netlify](https://app.netlify.com/sites/vanhelbergen-com/deploys?filter=deploy+previews).
+  - Run the production build to check there are no errors. You can check a deploy preview
+    for your branch on [Netlify](https://app.netlify.com/sites/vanhelbergen-com/deploys?filter=deploy+previews).
 
-Once the branch gets merged to master, Netlify deploys automatically to https://vanhelbergen-com.netlify.com/.
+  - Once the branch gets merged to master, Netlify deploys automatically to https://vanhelbergen-com.netlify.com/.
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -46,6 +50,7 @@ Once the branch gets merged to master, Netlify deploys automatically to https://
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     /.
+    ├── /.storybook
     ├── /src
         ├── /components
         ├── /content
@@ -61,19 +66,24 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 ### Folders
 
+1.  **`/.storybook`**: Storybook configuration files.
+
 1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
 
-1.  **`/components`**: React components for across the site.
+    1.  **`__stories__`**: Stories for all non-component type things. Otherwise stories are kept next to the components in the `components` folder.
 
-1.  **`/content`**: Markdown and MDX files for blogs and portfolio entries. Assets for entries should be included withing this folders.
+    1.  **`/components`**: React components for across the site.
 
-1.  **`/images`**: Assets that need to be dynamically included in random places, e.g. global styles, and the home logo.
 
-1.  **`/pages`**: Components under src/pages become pages automatically with paths based on their file name. Check out the pages docs for more detail.
+    1.  **`/content`**: Markdown and MDX files for blogs and portfolio entries. Assets for entries should be included withing this folders.
 
-1.  **`/templates`**: By convention, templates used across multiple pages are stored here. Contains templates for programmatically creating pages. Check out the templates docs for more detail.
+    1.  **`/images`**: Assets that need to be dynamically included in random places, e.g. global styles, and the home logo.
 
-1.  **`/theme`**: Contains all over-arching style files (styles for components are stored with their components). Not to be confused with Gatsby Themes.
+    1.  **`/pages`**: Components under src/pages become pages automatically with paths based on their file name. Check out the pages docs for more detail.
+
+    1.  **`/templates`**: By convention, templates used across multiple pages are stored here. Contains templates for programmatically creating pages. Check out the templates docs for more detail.
+
+    1.  **`/theme`**: Contains all over-arching style files (styles for components are stored with their components). Not to be confused with Gatsby Themes.
 
 1.  **`/static`**: If you put a file into the static folder, it will not be processed by Webpack. Instead it will be copied into the public folder untouched. Check out the assets docs for more detail.
 
@@ -100,3 +110,4 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 - [Gatsby documentation](https://www.gatsbyjs.org/docs/)
 - [Styled components](https://styled-components.com/docs)
 - [GraphQL](https://graphql.org/learn/)
+- [Storybook](https://storybook.js.org/docs/basics/introduction/)

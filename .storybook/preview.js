@@ -23,8 +23,8 @@ window.___navigate = pathname => {
 addDecorator(withA11y)
 
 addDecorator(storyFn => (
-  <>
+  <div style={{ padding: '16px' }}>
     <GlobalStyles />
     {storyFn()}
-  </>
+  </div>
 ))

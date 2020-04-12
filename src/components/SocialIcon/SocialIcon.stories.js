@@ -3,20 +3,16 @@ import {
   FaFacebookF,
   FaGithub,
   FaInstagram,
-  FaLinkedinIn,
   FaMediumM,
   FaYoutube,
 } from 'react-icons/fa'
-
 import SocialIcon from './SocialIcon'
 import SocialIconList from './SocialIconList'
 
 export const Single = () => (
-  <div>
-    <SocialIcon url="https://github.com/allardvanhelbergen">
-      <FaGithub />
-    </SocialIcon>
-  </div>
+  <SocialIcon url="https://github.com/allardvanhelbergen">
+    <FaGithub />
+  </SocialIcon>
 )
 
 export const List = () => (
@@ -41,5 +37,4 @@ export const List = () => (
 
 export default {
   title: 'Components/SocialIcon',
-  component: SocialIcon,
 }

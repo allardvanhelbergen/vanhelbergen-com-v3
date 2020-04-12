@@ -1,3 +1,6 @@
+const path = require('path')
+const pathToInlineSvg = path.resolve(__dirname, '../src/images/')
+
 module.exports = ({ config }) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
   config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
@@ -20,6 +23,32 @@ module.exports = ({ config }) => {
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main']
+
+  // remove svg from existing rule
+  // Copied from https://github.com/storybookjs/storybook/issues/6188
+  config.module.rules = config.module.rules.map(rule => {
+    if (
+      String(rule.test) ===
+      String(
+        /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/
+      )
+    ) {
+      return {
+        ...rule,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/,
+      }
+    }
+
+    return rule
+  })
+
+  config.module.rules.push({
+    test: /\.svg$/,
+    include: [pathToInlineSvg],
+    // next line is copied from the link above, but it only seems ot work without url-loader.
+    // use: ['svg-react-loader', 'url-loader'],
+    use: ['svg-react-loader'],
+  })
 
   return config
 }

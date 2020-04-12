@@ -1,26 +1,62 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import monogram from '../../images/avh-monogram-transparent.svg'
+import tokens from '../../theme/tokens'
+import Monogram from '../../images/avh-monogram-transparent.inline.svg'
+
+const Logo = styled(Monogram)`
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+`
 
 const NavContainer = styled.nav`
   position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem;
-  background: orange;
+  padding: 1.5rem;
+  background: ${tokens.color.white};
   z-index: 100;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(0 0 5px 0.2);
 
   a {
-    color: white;
     text-decoration: none;
-  }
-`
+    color: ${tokens.color.text.default};
 
-const Logo = styled.img`
-  width: 2em;
+    &:hover {
+      color: ${tokens.color.primary};
+    }
+  }
+
+  ${Logo} {
+    fill: ${tokens.color.text.default};
+
+    &:hover {
+      fill: ${tokens.color.primary};
+    }
+  }
+
+  &.clear {
+    background-color: transparent;
+    box-shadow: 0 1px 0 ${tokens.color.white};
+
+    a {
+      color: ${tokens.color.white};
+
+      &:hover {
+        color: ${tokens.color.primary};
+      }
+    }
+
+    ${Logo} {
+      fill: ${tokens.color.white};
+
+      &:hover {
+        fill: ${tokens.color.primary};
+      }
+    }
+  }
 `
 
 const NavLeftContainer = styled.div`
@@ -41,11 +77,11 @@ const NavRightContainer = styled.ul`
   }
 `
 
-const HeaderNavBar = () => (
-  <NavContainer>
+const HeaderNavBar = ({ appearance = 'clear' }) => (
+  <NavContainer className={appearance}>
     <NavLeftContainer>
       <Link to="/">
-        <Logo src={monogram} />
+        <Logo />
       </Link>
     </NavLeftContainer>
     <NavRightContainer>
