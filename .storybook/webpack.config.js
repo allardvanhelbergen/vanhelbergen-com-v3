@@ -2,6 +2,24 @@ const path = require('path')
 const pathToInlineSvg = path.resolve(__dirname, '../src/images/')
 
 module.exports = ({ config }) => {
+  config.module.rules.push({
+    test: /\.css$/,
+    use: [
+      // Loader for webpack to process CSS with PostCSS
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          config: {
+            path: './.storybook/',
+          },
+        },
+      },
+    ],
+
+    include: path.resolve(__dirname, '../'),
+  })
+
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
   config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
 
@@ -19,6 +37,8 @@ module.exports = ({ config }) => {
     require.resolve('@babel/plugin-proposal-class-properties'),
     // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
     require.resolve('babel-plugin-remove-graphql-queries'),
+    // Next line allows post-css to work... and you get tailwind. Or sth.
+    require.resolve('babel-plugin-macros'),
   ]
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
