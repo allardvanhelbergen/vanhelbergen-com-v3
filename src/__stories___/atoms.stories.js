@@ -1,12 +1,12 @@
 import React from 'react'
 
 export default {
-  title: 'Atoms',
+  title: '2: Atoms',
 }
 
 export const AllHTMLElements = () => (
   <div>
-    <h1>🎨 All the HTML elements 🎨</h1>
+    <h1>🎨 All the HTML elements</h1>
     <h2>Headings</h2>
     <Headings />
     <h2>Typographic elements</h2>

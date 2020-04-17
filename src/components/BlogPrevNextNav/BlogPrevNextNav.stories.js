@@ -33,6 +33,6 @@ export const All = () => (
 )
 
 export default {
-  title: 'Components/BlogPrevNextNav',
+  title: '3: Components/BlogPrevNextNav',
   component: BlogPrevNextNav,
 }

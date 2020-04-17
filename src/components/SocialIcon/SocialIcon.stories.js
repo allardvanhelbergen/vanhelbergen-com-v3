@@ -36,5 +36,5 @@ export const List = () => (
 )
 
 export default {
-  title: 'Components/SocialIcon',
+  title: '3: Components/SocialIcon',
 }
