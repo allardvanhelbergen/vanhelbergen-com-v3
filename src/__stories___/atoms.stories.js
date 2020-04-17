@@ -1,12 +1,10 @@
 import React from 'react'
-import { linkTo } from '@storybook/addon-links'
-import { Welcome } from '@storybook/react/demo'
 
 export default {
-  title: 'General',
+  title: 'Atoms',
 }
 
-export const All = () => (
+export const AllHTMLElements = () => (
   <div>
     <h1>🎨 All the HTML elements 🎨</h1>
     <h2>Headings</h2>
