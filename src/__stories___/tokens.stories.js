@@ -174,16 +174,27 @@ export const Typography = () => {
         Curabitur at ante in dolor dignissim sollicitudin.
       </p>
       <p>&nbsp;</p>
-      <p className="text-xs">extra small</p>
-      <p className="text-sm">small</p>
-      <p className="text-base">base</p>
-      <p className="text-lg">large</p>
-      <p className="text-xl">extra large</p>
-      <p className="text-2xl">2 extra large</p>
-      <p className="text-3xl">3 extra large</p>
-      <p className="text-4xl">4 extra large</p>
-      <p className="text-5xl">5 extra large</p>
-      <p className="text-6xl">6 extra large</p>
+      <p className="text-xs">font-size extra small</p>
+      <p className="text-sm">font-size small</p>
+      <p className="text-base">font-size base</p>
+      <p className="text-lg">font-size large</p>
+      <p className="text-xl">font-size extra large</p>
+      <p className="text-2xl">font-size 2 extra large</p>
+      <p className="text-3xl">font-size 3 extra large</p>
+      <p className="text-4xl">font-size 4 extra large</p>
+      <p className="text-5xl">font-size 5 extra large</p>
+      <p className="text-6xl">font-size 6 extra large</p>
+      <p>&nbsp;</p>
+      <p className="bg-gray-200 mb-2 leading-xs">line-height extra small</p>
+      <p className="bg-gray-200 mb-2 leading-sm">line-height small</p>
+      <p className="bg-gray-200 mb-2 leading-base">line-height base</p>
+      <p className="bg-gray-200 mb-2 leading-xl">line-height extra large</p>
+      <p className="bg-gray-200 mb-2 leading-lg">line-height large</p>
+      <p className="bg-gray-200 mb-2 leading-2xl">line-height 2 extra large</p>
+      <p className="bg-gray-200 mb-2 leading-3xl">line-height 3 extra large</p>
+      <p className="bg-gray-200 mb-2 leading-4xl">line-height 4 extra large</p>
+      <p className="bg-gray-200 mb-2 leading-5xl">line-height 5 extra large</p>
+      <p className="bg-gray-200 mb-2 leading-6xl">line-height 6 extra large</p>
     </section>
   )
 }
@@ -280,5 +291,5 @@ export const BoxShadows = () => {
 }
 
 export default {
-  title: 'Tokens',
+  title: '1: Tokens',
 }
