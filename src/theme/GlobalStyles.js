@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 import tw from 'twin.macro'
-import tokens from './tokens'
 import bodyBackgroundImage from '../images/noise-100x100-90noise-4opacity.png'
 
 /**
@@ -15,23 +14,25 @@ const GlobalStyles = createGlobalStyle`
   html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-
+  
   /* Set core body defaults */
   body {
+    ${tw`text-base leading-base
+      sm:text-lg sm:leading-lg
+      font-serif text-gray-800 
+      bg-gray-100`}
     min-height: 100vh;
     width: 100vw;
     max-width: 100vw;
     scroll-behavior: smooth;
     background: url(${bodyBackgroundImage});
-    background-color: ${tokens.color.background};
-    color: ${tokens.color.text.default};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
+    font-variant: common-ligatures discretionary-ligatures historical-ligatures contextual oldstyle-nums proportional-nums diagonal-fractions;
   }
 
   [tabindex="-1"]:focus {
@@ -39,31 +40,166 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    ${tw`text-6xl`}
+    ${tw`text-3xl leading-3xl 
+      sm:text-4xl sm:leading-3xl
+      my-7
+      font-serif font-medium tracking-tighter`}
   }
 
   h2 {
-    ${tw`text-4xl`}
+    ${tw`text-2xl leading-2xl 
+      sm:text-3xl sm:leading-3xl 
+      mt-7 mb-4
+      font-sans font-semibold tracking-tighter`}
+  }
+  h3 {
+    ${tw`text-xl leading-xl
+      sm:text-2xl sm:leading-2xl
+      mt-7 mb-3
+      font-serif tracking-tight text-gray-600`}
+    font-variant: small-caps;
+  }
+  h4 {
+    ${tw`text-xl leading-xl
+      font-sans font-semibold`}
+  }
+  h5 {
+    ${tw`text-lg leading-lg
+      font-medium`}
+  }
+  h6 {
+    ${tw`text-base leading-base
+      font-sans font-bold text-gray-600`}
+    font-variant: small-caps;
+  }
+
+  p {
+    ${tw`my-2 font-serif`}
+    font-variant: common-ligatures discretionary-ligatures historical-ligatures contextual proportional-nums oldstyle-nums proportional-nums diagonal-fractions;
+  }
+
+  sub,
+  sup {
+    font-size: 62%;
+    line-height: 50%;
   }
 
   a {
-    color: ${tokens.color.text.link};
-    background-color: transparent;
+    ${tw`bg-transparent text-orange-500`}
+    text-decoration: underline;
     
-    &:hover {
-      color: ${tokens.color.text.linkHover};
-      text-decoration: none;
+    &:visited {
+      ${tw`text-orange-700`}
     }
 
-    /* A elements that don't have a class get default styles */
-    &:not([class]) {
-      text-decoration-skip-ink: auto;
+    &:hover, 
+    &:active,
+    &:focus {
+      ${tw`text-orange-400`}
+      text-decoration: none;
     }
   }
 
+  abbr {
+    cursor: help;
+  }
+
+  ul,
+  ol {
+    ${tw`px-7 mb-7`}
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+    
+    ol{
+      list-style: lower-alpha
+    }
+  }
+
+  ol ol, 
+  ol ul, 
+  ul ol, 
+  ul ul {
+    margin-bottom: 0;
+  }
+
+  dl {
+    ${tw`mb-7`}
+    
+    dt {
+      ${tw`block font-bold`}
+    }
+    
+    dd {
+      ${tw`pl-7`}
+    }
+  }
+
+  blockquote {
+    ${tw`py-2 px-4 mb-7
+    border-l-4 border-orange-400
+    bg-gray-200 
+    font-sans italic`}
+
+    blockquote {
+      ${tw`mb-0`}
+    }
+  }
+
+  kbd, 
+  pre,
+  code {
+    ${tw`bg-gray-200 text-purple-800`}
+    font-size: .875em;
+  }
+
+  pre {
+    ${tw`p-4`}
+    line-height: 1.5em;
+  }
+
+  :not(pre) > code, 
+  kbd {
+    ${tw`inline-block px-1 rounded-sm`}
+    line-height: 1.5em;
+    white-space: nowrap;
+  }
+
+  table {
+    ${tw`font-sans`}
+    font-size: 80%;
+    /* line-height: 80%; */
+
+    th, 
+    td {
+      ${tw`px-2 text-left align-top`}
+    }
+  
+    th {
+      ${tw`border-b`}
+    }
+  }
+
+  hr {
+    ${tw`my-7 mx-auto p-0 border-none h-px w-10/12 text-center overflow-visible`}
+    background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+    
+    &:after {
+      ${tw`inline-block relative px-1 bg-white text-base`}
+      content: '§';
+      top: -1.175rem;
+    }
+  }
+
+
   /* Natural flow and rhythm in articles by default */
   article > * + * {
-    margin-top: 1rem;
+    ${tw`mt-4`}
   }
 
   /* Remove all animations and transitions for people that prefer not to see them */

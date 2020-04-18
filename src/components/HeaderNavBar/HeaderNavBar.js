@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 import tokens from '../../theme/tokens'
 import Monogram from '../../images/avh-monogram-transparent.inline.svg'
 
@@ -66,6 +67,7 @@ const NavLeftContainer = styled.div`
 const NavRightContainer = styled.ul`
   /* max-width: 800px; */
   /* text-align: right; */
+  ${tw`list-none m-0 p-0`}
   display: grid;
   grid-template-columns: repeat(5, auto);
   align-items: center;
