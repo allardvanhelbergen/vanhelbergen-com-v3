@@ -30,9 +30,9 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    font-feature-settings: "pnum";
-    font-variant-numeric: proportional-nums;
-    font-variant: common-ligatures discretionary-ligatures historical-ligatures contextual oldstyle-nums proportional-nums diagonal-fractions;
+    font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-feature-settings: 'pnum';
   }
 
   [tabindex="-1"]:focus {
@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
       sm:text-2xl sm:leading-2xl
       mt-7 mb-3
       font-serif tracking-tight text-gray-600`}
-    font-variant: small-caps;
+    font-variant-caps: small-caps;
   }
   h4 {
     ${tw`text-xl leading-xl
@@ -70,12 +70,11 @@ const GlobalStyles = createGlobalStyle`
   h6 {
     ${tw`text-base leading-base
       font-sans font-bold text-gray-600`}
-    font-variant: small-caps;
+    font-variant-caps: small-caps;
   }
 
   p {
     ${tw`my-2 font-serif`}
-    font-variant: common-ligatures discretionary-ligatures historical-ligatures contextual proportional-nums oldstyle-nums proportional-nums diagonal-fractions;
   }
 
   sub,
