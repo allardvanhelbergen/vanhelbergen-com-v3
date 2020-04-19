@@ -85,11 +85,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    ${tw`bg-transparent text-orange-500`}
+    ${tw`bg-transparent text-orange-800`}
     text-decoration: underline;
+    transition: color 0.2s ease-in-out;
     
     &:visited {
-      ${tw`text-orange-700`}
+      ${tw`text-orange-900`}
     }
 
     &:hover, 
@@ -101,6 +102,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   abbr {
+    ${tw`text-orange-800`}
     cursor: help;
   }
 
@@ -189,13 +191,21 @@ const GlobalStyles = createGlobalStyle`
   }
 
   hr {
-    ${tw`my-7 mx-auto p-0 border-none h-px w-10/12 text-center overflow-visible`}
-    background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+    ${tw`my-7 mx-auto p-0 
+    border-none border-0 
+    h-px w-10/12 
+    text-center overflow-visible`}
+    background-image: linear-gradient(to right, #f7fafc, #718096, #f7fafc);
     
     &:after {
-      ${tw`inline-block relative px-1 bg-white text-base`}
+      ${tw`inline-block relative px-1 
+      rounded-full bg-white 
+      text-base text-gray-700 leading-none`}
       content: '§';
-      top: -1.175rem;
+      top: -0.875rem;
+      @media screen and (min-width: 640px) {
+        top: -1.175rem;
+      }
     }
   }
 
