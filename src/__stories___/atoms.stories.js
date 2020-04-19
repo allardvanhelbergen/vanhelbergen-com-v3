@@ -40,6 +40,8 @@ export const Headings = () => (
 export const Typographic = () => (
   <div>
     <p>
+      sdfghjkl,mnbyuiol <br />
+      1234567890 <br />
       © ® ™ ˚ § ¢ € $ £ ¥<br />
       + − • × = ≠ ≤ ≥ ÷ ± ∞ ‰ ½ ¼ ¾<br />ƒ œ æ ø þ ß ð
     </p>
@@ -107,29 +109,27 @@ export const Typographic = () => (
       This is <abbr title="Hyper Text Markup Language">HTML</abbr> abbreviation
       example.
     </p>
-    <hr className="footnotes-sep" />
-    <section className="footnotes">
-      <ol className="footnotes-list">
-        <li id="fn1" className="footnote-item">
+    <p className="font-sans">
+      This is sans serif text. <br /> 1234 <br />
+      1/2
+    </p>
+    <p className="font-mono">
+      This is mono-space text. <br /> 1234 <br /> 1/2
+    </p>
+    <hr />
+    <section>
+      <ol>
+        <li id="fn1">
           <p>
             Footnote <strong>can have markup</strong>
           </p>
           <p>
-            and multiple paragraphs.{' '}
-            <a href="#fnref1" className="footnote-backref">
-              ↩︎
-            </a>
+            and multiple paragraphs. <a href="#fnref1">↩︎</a>
           </p>
         </li>
-        <li id="fn2" className="footnote-item">
+        <li id="fn2">
           <p>
-            Footnote text.{' '}
-            <a href="#fnref2" className="footnote-backref">
-              ↩︎
-            </a>{' '}
-            <a href="#fnref2:1" className="footnote-backref">
-              ↩︎
-            </a>
+            Footnote text. <a href="#fnref2">↩︎</a> <a href="#fnref2:1">↩︎</a>
           </p>
         </li>
       </ol>
