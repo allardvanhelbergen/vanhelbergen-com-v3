@@ -143,8 +143,9 @@ const GlobalStyles = createGlobalStyle`
   blockquote {
     ${tw`py-2 px-4 mb-7
     border-l-4 border-orange-400
+    rounded
     bg-gray-200 
-    font-sans italic`}
+    font-sans italic text-gray-700`}
 
     blockquote {
       ${tw`mb-0`}
@@ -159,7 +160,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   pre {
-    ${tw`p-4`}
+    ${tw`p-4 
+    border-l-4 border-purple-800 
+    rounded`}
     line-height: 1.5em;
   }
 
