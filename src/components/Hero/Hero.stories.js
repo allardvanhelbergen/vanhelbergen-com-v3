@@ -8,6 +8,6 @@ export const All = () => (
 )
 
 export default {
-  title: 'Components/Hero',
+  title: '3: Components/Hero',
   component: Hero,
 }

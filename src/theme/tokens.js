@@ -1,6 +1,7 @@
 const tokens = {
   breakpoint: {
     // Mobile first, so smallest size has no breakpoint.
+    // SET IN TW
     smallAndUp: '576px',
     mediumAndUp: '768px',
     largeAndUp: '992px',
@@ -14,23 +15,6 @@ const tokens = {
       default: '#211b00',
       link: '#f5a52b',
       linkHover: '#0056b3',
-    },
-  },
-  font: {
-    base: {
-      family: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
-        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
-      size: '1.25rem',
-      lineHeight: '2',
-    },
-    headings: {
-      family: `serif`,
-    },
-    code: {
-      family: `'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
-        'Liberation Mono', Menlo, Courier, monospace`,
-      size: '1em',
     },
   },
 }

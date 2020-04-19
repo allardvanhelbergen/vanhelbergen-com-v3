@@ -111,3 +111,14 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 - [Styled components](https://styled-components.com/docs)
 - [GraphQL](https://graphql.org/learn/)
 - [Storybook](https://storybook.js.org/docs/basics/introduction/)
+
+## 👏 Thanks
+
+I couldn't have built any of this without all the awesome people out on the web. Definitely forgetting some people here, but it's a start. :) 
+
+- Gatsby, Greater-gatsby
+- Storybook, Styled-components, Style-dictionary
+- Bootstrap, Tailwind
+- CCS tricks, A List apart, Smashing Mag
+- Egghead.io, TylerMcGinnes, Master Games
+

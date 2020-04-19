@@ -1,14 +1,12 @@
 import React from 'react'
-import { linkTo } from '@storybook/addon-links'
-import { Welcome } from '@storybook/react/demo'
 
 export default {
-  title: 'General',
+  title: '2: Atoms',
 }
 
-export const All = () => (
+export const AllHTMLElements = () => (
   <div>
-    <h1>🎨 All the HTML elements 🎨</h1>
+    <h1>🎨 All the HTML elements</h1>
     <h2>Headings</h2>
     <Headings />
     <h2>Typographic elements</h2>
@@ -42,16 +40,21 @@ export const Headings = () => (
 export const Typographic = () => (
   <div>
     <p>
-      © ® ™ ˚ § ¢ § <br />
-      + - • = ≠ ≤ ≥ ÷ ± ƒ <br /> œ æ ø þ ß ð £ ¥
+      © ® ™ ˚ § ¢ € $ £ ¥<br />
+      + − • × = ≠ ≤ ≥ ÷ ± ∞ ‰ ½ ¼ ¾<br />ƒ œ æ ø þ ß ð
     </p>
-    <p>ellipses… you know… </p>
-    <p>en-dash: 18 – 25 November</p>
-    <p>em-dash: I just met you, and you— squirrel! —are my best friend.</p>
-    <p>“Smartypants, double quotes” and ‘single quotes’</p>
+    <p>ellipses… you know &hellip; </p>
+    <p>en-dash: 18–25 November &ndash; </p>
+    <p>
+      em-dash: I just met you, and you — squirrel! &mdash; are my best friend.
+    </p>
+    <p>
+      “Smartypants, double quotes” &ldquo; &rdquo; and ‘single quotes’ &lsquo;
+      &rsquo;
+    </p>
     <p>
       19<sup>th</sup> of September. <br />
-      Congrats! You came 1<sup>st</sup>
+      Congrats! You came 1<sup>st</sup>e = mc&sup2;
     </p>
     <p>
       H<sub>2</sub>O, C<sub>21</sub>H<sub>30</sub>O<sub>2</sub>
@@ -139,7 +142,7 @@ export const Lists = () => (
     <ul>
       <li>A list with</li>
       <li>
-        <p>Unordered items</p>
+        Unordered items
         <ul>
           <li>Sub list</li>
           <li>of unordered</li>
@@ -150,13 +153,19 @@ export const Lists = () => (
     </ul>
     <ol>
       <li>This is</li>
-      <li>an ordered</li>
+      <li>
+        an ordered
+        <ol>
+          <li>with</li>
+          <li>sub-items!</li>
+        </ol>
+      </li>
       <li>List</li>
     </ol>
     <dl>
       <dt>A thing</dt>
       <dd>Its definition.</dd>
-      <dt>Another things</dt>
+      <dt>Another thing</dt>
       <dd>And another definition.</dd>
     </dl>
   </div>
@@ -165,7 +174,7 @@ export const Lists = () => (
 export const Code = () => (
   <div>
     <p>
-      Inline <code>code</code>
+      Inline <code>code</code> and keyboard <kbd>⌘</kbd>&nbsp;<kbd>K</kbd>
     </p>
     <p>Block code</p>
     <pre>
@@ -182,16 +191,15 @@ console.log(foo(5))`}
 
 export const Quotes = () => (
   <div>
-    Some text.
-    <blockquote>This is a quote.</blockquote>
-    Some more text.
+    <p>
+      Bob said, <q>pyjamas</q> but Chris said, <q>kimono</q>.
+    </p>
     <blockquote>
-      <p>Blockquotes can also be nested…</p>
+      Words. <br />
+      Blockquotes can also be nested…
       <blockquote>
-        <p>…like…</p>
-        <blockquote>
-          <p>…this.</p>
-        </blockquote>
+        like…
+        <blockquote>this.</blockquote>
       </blockquote>
     </blockquote>
   </div>
@@ -217,8 +225,8 @@ export const Tables = () => (
         <tr>
           <td>engine</td>
           <td>
-            engine to be used for processing templates. Handlebars is the
-            default.
+            engine to be used for processing templates. <br />
+            Handlebars is the default.
           </td>
         </tr>
         <tr>

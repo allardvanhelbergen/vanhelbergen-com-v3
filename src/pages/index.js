@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 import {
   // FaDribbble,
   FaFacebookF,
@@ -29,6 +30,7 @@ const WelcomeText = styled.div`
 `
 
 const WelcomeMain = styled.h1`
+  ${tw`font-sans`}
   color: #f5a52b;
   text-shadow: 0 0 0 rgb(217, 136, 15), 0 1px 0 rgb(210, 129, 8),
     0 2px 0 rgb(204, 123, 2), 0 3px 0 rgb(198, 117, -4),
