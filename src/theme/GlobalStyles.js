@@ -203,7 +203,7 @@ const GlobalStyles = createGlobalStyle`
       text-base text-gray-700 leading-none`}
       content: '§';
       top: -0.875rem;
-      @media screen and (min-width: 640px) {
+      @media (min-width: 640px) {
         top: -1.175rem;
       }
     }
