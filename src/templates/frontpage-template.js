@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import tw from 'twin.macro'
 import styled, { createGlobalStyle } from 'styled-components'
 
 import BaseLayout from './base-template'
@@ -15,26 +16,8 @@ const FullPageStyle = createGlobalStyle`
 `
 
 const FrontPageContainer = styled.div`
-  margin: 0 auto;
-  padding: 1.25rem 1.5rem; // 20px 24px
-
-  @media (min-width: ${tokens.breakpoint.mediumAndUp}) {
-    max-width: 45rem; // 720px
-  }
-
-  @media (min-width: ${tokens.breakpoint.largeAndUp}) {
-    max-width: 60rem; // 960px
-  }
-
-  @media (min-width: ${tokens.breakpoint.extraLargeAndUp}) {
-    max-width: 75rem; // 1200px
-  }
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  ${tw`sm:max-w-2xl
+  m-auto px-5`}
 `
 
 const Layout = ({ children }) => (
