@@ -26,6 +26,10 @@ The www.vanhelbergen.com website.
 
 - To get a sitemap, enter the URL of any nonexisting page. http://localhost:8000/asdf
 - Design files are on Figma. https://www.figma.com/files/project/3988002/vanhelbergen.com
+- SVGs
+  - importing file directly will inline it as base64. 
+  - Set filename to `[name].inline.svg` and it gatsby-plugin-react-svg will include it as a React component (that you can style!).
+  - Include it through gatsby-image and it will have fancy loading animations. 
 
 ## 💫 Deploy
 
