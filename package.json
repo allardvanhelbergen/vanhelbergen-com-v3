@@ -26,7 +26,7 @@
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
     "babel-plugin-macros": "^2.8.0",
-    "gatsby": "^2.19.17",
+    "gatsby": "^2.24.90",
     "gatsby-image": "^2.2.42",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-mdx": "^1.0.75",
@@ -63,6 +63,6 @@
     "prettier": "^2.1.2",
     "svg-react-loader": "^0.4.6",
     "tailwindcss": "^1.9.6",
-    "twin.macro": "^1.11.1"
+    "twin.macro": "^1.12.0"
   }
 }

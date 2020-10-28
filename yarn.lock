@@ -8095,10 +8095,10 @@ gatsby-transformer-sharp@^2.3.16:
     semver "^7.3.2"
     sharp "^0.25.4"
 
-gatsby@^2.19.17:
-  version "2.24.89"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.89.tgz#62bb288e78ac3a39684e1c79b9e572692855765c"
-  integrity sha512-52DsiFbWm8NNzCscEiOpw1g26bP3n+WiiMqBmpIrxs8vTgxvPF84+XsGZHrkPvLv/+d16Navxf9Q2g7ZBHAsmw==
+gatsby@^2.24.90:
+  version "2.24.90"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.90.tgz#e7a963979561b66c0fdc460ffa6a57b6285ecbe1"
+  integrity sha512-Cy2u2M7BxBoPb8rMsy7heSFFovGSRsn4KjJ4q5+ZAAq7wd+BKV2SPxIfQLY6vgtkk2++uql2OZkGjU1q5JRGBQ==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.11.6"
@@ -16211,7 +16211,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^1.9.4, tailwindcss@^1.9.6:
+tailwindcss@^1.9.6:
   version "1.9.6"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.9.6.tgz#0c5089911d24e1e98e592a31bfdb3d8f34ecf1a0"
   integrity sha512-nY8WYM/RLPqGsPEGEV2z63riyQPcHYZUJpAwdyBzVpxQHOHqHE+F/fvbCeXhdF1+TA5l72vSkZrtYCB9hRcwkQ==
@@ -16619,10 +16619,10 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-twin.macro@^1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-1.11.1.tgz#dbad8aa9c50916d8001ae56ec3388ac1bcd2cfc0"
-  integrity sha512-QSCp/JaDD2XjnkwHOd/fjmFF7us80YegPZw3wQofR42vnKyfq0GvpUeuxHZRvNnsgQq/d5AsE+cFc+1s0Da2Mg==
+twin.macro@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-1.12.0.tgz#3917743cee5e0693df9679ab182aba4de962be45"
+  integrity sha512-KGRed9d42MkZDIS4wnCvUp5PsPnRx3eaMpvTAOQTz7/K7ArELhg/+SrbJxniQWh6QtRm7/LotlzRfvVW3/qGHQ==
   dependencies:
     "@babel/parser" "^7.10.2"
     babel-plugin-macros "^2.8.0"
@@ -16633,7 +16633,7 @@ twin.macro@^1.11.1:
     dset "^2.0.1"
     lodash.merge "^4.6.2"
     string-similarity "^4.0.1"
-    tailwindcss "^1.9.4"
+    tailwindcss "^1.9.6"
     timsort "^0.3.0"
 
 type-check@~0.3.2:
