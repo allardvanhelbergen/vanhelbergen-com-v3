@@ -31,7 +31,7 @@
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-mdx": "^1.0.75",
     "gatsby-plugin-offline": "^3.0.34",
-    "gatsby-plugin-postcss": "^2.2.1",
+    "gatsby-plugin-postcss": "^3.0.4",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.5",
