@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import tokens from '../../theme/tokens'
+// import tokens from '../../theme/tokens'
 
 const IconsList = styled.div`
   display: flex;

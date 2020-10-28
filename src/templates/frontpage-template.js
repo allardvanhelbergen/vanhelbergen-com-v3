@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import styled, { createGlobalStyle } from 'styled-components'
 
 import BaseLayout from './base-template'
-import tokens from '../theme/tokens'
+// import tokens from '../theme/tokens'
 
 const FullPageStyle = createGlobalStyle`
   html,
