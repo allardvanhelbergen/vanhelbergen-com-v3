@@ -23,8 +23,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.7",
-    "@mdx-js/react": "^1.5.7",
+    "@mdx-js/mdx": "^1.6.19",
+    "@mdx-js/react": "^1.6.19",
     "babel-plugin-macros": "^2.8.0",
     "gatsby": "^2.19.17",
     "gatsby-image": "^2.2.42",
@@ -43,8 +43,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.7.0",
-    "styled-components": "^4.3.2"
+    "react-icons": "^3.11.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
