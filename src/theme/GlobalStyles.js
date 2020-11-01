@@ -21,8 +21,6 @@ const GlobalStyles = createGlobalStyle`
       sm:text-lg sm:leading-lg
       font-serif text-gray-800 
       bg-gray-100`}
-    min-height: 100vh;
-    width: 100vw;
     max-width: 100vw;
     scroll-behavior: smooth;
     background: url(${bodyBackgroundImage});
